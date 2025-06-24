@@ -1,0 +1,117 @@
+@font-face {
+font-family: "Classy";
+src: url('../fonts/Classy Free Trial.otf') format("opentype");
+}
+
+@keyframes slideDown {
+from {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 90px;
+background: linear-gradient(135deg, #181616, #1aeb07);
+display: flex;
+align-items: center;
+padding: 0 2rem;
+z-index: 10;
+box-shadow: 0 2px 5px rgba(0, 255, 136, 0.2);
+font-family:'classy' ;
+font-size: 25px;
+}
+
+.logo {
+height: 70px;
+width: 70px;
+border-radius: 50%;
+margin-right: 1rem;
+object-fit: cover;
+}
+
+.navbar {
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+height: 90px;
+background: linear-gradient(135deg, #181616, #1aeb07);
+display: flex;
+align-items: center;
+padding: 0 2rem;
+z-index: 10;
+box-shadow: 0 2px 5px rgba(0, 255, 136, 0.2);
+animation: slideDown 0.8s ease-out;
+}
+
+.logo {
+height: 70px;
+width: 70px;
+border-radius: 50%;
+margin-right: 1rem;
+object-fit: cover;
+}
+
+.nav-links {
+display: flex;
+gap: 1.5rem;
+}
+
+.nav-links a {
+color: #070808;
+text-decoration: none;
+font-weight: 30px;
+transition: 0.3s;
+}
+
+.nav-links a:hover {
+text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .logo {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
+  }
+}
