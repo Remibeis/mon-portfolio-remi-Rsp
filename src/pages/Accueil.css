@@ -169,4 +169,23 @@ body {
   }
 }
 
+@media (min-width: 1024px) {
+  .accueil-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .accueil-container p,
+  .accueil-container h1,
+  .accueil-container h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
 
