@@ -28,7 +28,7 @@ const projects = [
     {
     title: "Rocket",
     description: "Projet d’animation interactive en JavaScript avec interface HTML/CSS. L’utilisateur peut déclencher le décollage ou l’annulation du lancement d’une fusée. Dynamique, responsive, et animé avec des éléments graphiques personnalisés",
-      imageUrl: "/images/rocket.png", // remplace par ta vraie image
+    imageUrl: "/images/Rocketimg.png", 
     },
     {
     title: "Projet Infra (API Backend)",
