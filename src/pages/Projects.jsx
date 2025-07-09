@@ -1,44 +1,85 @@
+import { useState } from "react";
 import './Projects.css';
 
-export default function Projects() {
-    return (
-    <div className="projects-container">
-        <h1>Mes Projets</h1>
-        <div className="projects-list">
-        <div className="project-card">
-        <h2>Rocket</h2>
-        <p>Projet d’animation interactive en JavaScript avec interface HTML/CSS. L’utilisateur peut déclencher le décollage ou l’annulation du lancement d’une fusée. Dynamique, responsive, et animé avec des éléments graphiques personnalisés</p>
-        </div>
-        <div className="project-card">
-        <h2>Projet Infra (API Backend)</h2>
-        <p>Développement d’une API REST en Node.js avec Express. Gestion des employés, projets et départements. Documentation Swagger, conteneurisation avec Docker et liaison à une base PostgreSQL.</p>
-        </div>
-        <div className="project-card">
-            <h2>Forum Ynov</h2>
-            <p>Application fullstack avec React, Node.js, MongoDB et Docker. Gestion des utilisateurs, messages, frontend dynamique et API sécurisée.</p>
-        </div>
-        <div className="project-card">
-            <h2>Portfolio personnel</h2>
-            <p>Portfolio codé en React + Vite avec routing, navbar animée, design sobre et responsive. Intégration des projets et contact avec lien vers CV.</p>
-        </div>
-        <div className="project-card">
-            <h2>Groupie Tracker (Go)</h2>
-                <p>Web app en Go récupérant des données d’artistes et affichant leur discographie et concerts. Structure MVC, gestion JSON et templates.</p>
-        </div>
-        <div className="project-card">
-            <h2>React Quiz</h2>
-            <p>Mini-jeu de quiz avec score, logique conditionnelle et transitions. React pur, états dynamiques, composant unique.</p>
-        </div>
-        <div className="project-card">
-            <h2>Hangman Web</h2>
-            <p>Jeu du pendu en JavaScript pur, responsive, avec logique aléatoire et interface stylée.</p>
-        </div>
-        <div className="project-card">
-            <h2>Défis TryHackMe & OSINT</h2>
-            <p>Résolution de challenges en cybersécurité (Follina, Log Analysis, OSINT, stéganographie). Rédaction de writeups et analyse de données.</p>
-        </div>
-        </div>
+function ProjectCard({ title, description, imageUrl }) {
+const [flipped, setFlipped] = useState(false);
+
+return (
+    <div
+    className={`project-card${flipped ? " flipped" : ""}`}
+    onClick={() => setFlipped(!flipped)}
+    role="button"
+    tabIndex={0}
+    onKeyDown={e => { if (e.key === "Enter") setFlipped(!flipped); }}
+    >
+    <div className="card-front">
+        <h2>{title}</h2>
+        <p>{description}</p>
     </div>
-    );
+    <div className="card-back">
+        <img src={imageUrl} alt={`Image du projet ${title}`} />
+    </div>
+    </div>
+);
 }
 
+export default function Projects() {
+const projects = [
+    {
+    title: "Rocket",
+    description: "Projet d’animation interactive en JavaScript avec interface HTML/CSS. L’utilisateur peut déclencher le décollage ou l’annulation du lancement d’une fusée. Dynamique, responsive, et animé avec des éléments graphiques personnalisés",
+      imageUrl: "/images/rocket.png", // remplace par ta vraie image
+    },
+    {
+    title: "Projet Infra (API Backend)",
+    description: "Développement d’une API REST en Node.js avec Express. Gestion des employés, projets et départements. Documentation Swagger, conteneurisation avec Docker et liaison à une base PostgreSQL.",
+    imageUrl: "/images/api-backend.png",
+    },
+    {
+    title: "Forum Ynov",
+    description: "Application fullstack avec React, Node.js, MongoDB et Docker. Gestion des utilisateurs, messages, frontend dynamique et API sécurisée.",
+    imageUrl: "/images/forum-ynov.png",
+    },
+    {
+    title: "Portfolio personnel",
+    description: "Portfolio codé en React + Vite avec routing, navbar animée, design sobre et responsive. Intégration des projets et contact avec lien vers CV.",
+    imageUrl: "/images/portfolio.png",
+    },
+    {
+    title: "Groupie Tracker (Go)",
+    description: "Web app en Go récupérant des données d’artistes et affichant leur discographie et concerts. Structure MVC, gestion JSON et templates.",
+    imageUrl: "/images/groupie-tracker.png",
+    },
+    {
+    title: "React Quiz",
+    description: "Mini-jeu de quiz avec score, logique conditionnelle et transitions. React pur, états dynamiques, composant unique.",
+    imageUrl: "/images/react-quiz.png",
+    },
+    {
+    title: "Hangman Web",
+    description: "Jeu du pendu en JavaScript pur, responsive, avec logique aléatoire et interface stylée.",
+    imageUrl: "/images/hangman.png",
+    },
+    {
+    title: "Défis TryHackMe & OSINT",
+    description: "Résolution de challenges en cybersécurité (Follina, Log Analysis, OSINT, stéganographie). Rédaction de writeups et analyse de données.",
+    imageUrl: "/images/tryhackme.png",
+    },
+];
+
+return (
+    <div className="projects-container">
+    <h1>Mes Projets</h1>
+    <div className="projects-list">
+        {projects.map((proj, idx) => (
+        <ProjectCard
+            key={idx}
+            title={proj.title}
+            description={proj.description}
+            imageUrl={proj.imageUrl}
+        />
+        ))}
+    </div>
+    </div>
+);
+}
