@@ -43,7 +43,7 @@ const projects = [
     {
     title: "Portfolio personnel",
     description: "Portfolio codé en React + Vite avec routing, navbar animée, design sobre et responsive. Intégration des projets et contact avec lien vers CV.",
-    imageUrl: "/images/portfolio.png",
+    imageUrl: "/images/portefolio.png",
     },
     {
     title: "Groupie Tracker (Go)",
