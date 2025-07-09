@@ -38,7 +38,7 @@ const projects = [
     {
     title: "Forum Ynov",
     description: "Application fullstack avec React, Node.js, MongoDB et Docker. Gestion des utilisateurs, messages, frontend dynamique et API sécurisée.",
-    imageUrl: "/images/forum-ynov.png",
+    imageUrl: "/images/imgforum.png",
     },
     {
     title: "Portfolio personnel",
