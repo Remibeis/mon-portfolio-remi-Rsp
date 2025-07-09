@@ -48,7 +48,7 @@ const projects = [
     {
     title: "Groupie Tracker (Go)",
     description: "Web app en Go récupérant des données d’artistes et affichant leur discographie et concerts. Structure MVC, gestion JSON et templates.",
-    imageUrl: "/images/groupie-tracker.png",
+    imageUrl: "/images/groupietrrrr.png",
     },
     {
     title: "React Quiz",
