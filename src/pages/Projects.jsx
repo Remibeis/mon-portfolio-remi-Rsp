@@ -69,7 +69,8 @@ const projects = [
 
 return (
     <div className="projects-container">
-    <h1>Mes Projets</h1>
+    <h1>Mes Projets <p>cliquez sur un projet pour avoir un aperçu</p>
+    </h1>
     <div className="projects-list">
         {projects.map((proj, idx) => (
         <ProjectCard
