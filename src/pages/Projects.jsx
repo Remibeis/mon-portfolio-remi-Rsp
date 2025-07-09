@@ -53,7 +53,7 @@ const projects = [
     {
     title: "React Quiz",
     description: "Mini-jeu de quiz avec score, logique conditionnelle et transitions. React pur, états dynamiques, composant unique.",
-    imageUrl: "/images/react-quiz.png",
+    imageUrl: "/images/actorquiz.png",
     },
     {
     title: "Hangman Web",
