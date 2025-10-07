@@ -33,7 +33,7 @@ const projects = [
     {
     title: "Projet Infra (API Backend)",
     description: "Développement d’une API REST en Node.js avec Express. Gestion des employés, projets et départements. Documentation Swagger, conteneurisation avec Docker et liaison à une base PostgreSQL.",
-    imageUrl: "/images/api-backend.png",
+    imageUrl: "/images/infra.png",
     },
     {
     title: "Forum Ynov",
