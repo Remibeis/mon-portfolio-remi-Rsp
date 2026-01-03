@@ -70,7 +70,7 @@ export default function Contact() {
       <div className="cv-section">
         <h2>Mon CV</h2>
         <p className="cv-description">Téléchargez mon CV complet pour découvrir mon parcours détaillé et mes expériences</p>
-        <a href="/About Me (7).pdf" download className="cv-button">
+        <a href="/About Me.pdf" download className="cv-button">
           <span>📥 Télécharger mon CV</span>
         </a>
       </div>
